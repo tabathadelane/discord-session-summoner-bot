@@ -2,6 +2,8 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const fetch = require("node-fetch");
 const { MessageEmbed } = require("discord.js");
 
+require("dotenv").config();
+
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("poof")
