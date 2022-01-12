@@ -9,6 +9,7 @@ module.exports = {
     .setName("poof")
     .setDescription("Summon the summoner!"),
   async execute(interaction) {
+    console.log("/poof command entered");
     const url =
       "https://discord.com/api/guilds/690636760698323065/scheduled-events";
     // cron.schedule("*/10 * * * * *", async () => {
