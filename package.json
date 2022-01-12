@@ -5,6 +5,7 @@
   "main": "bot.js",
   "scripts": {
     "test": "node src/bot.js"
+    "start": "node src/bot.js"
   },
   "author": "Althea Moonbrooke",
   "license": "ISC",
