@@ -4,7 +4,7 @@
   "description": "Scheduled event notifications to summon the party members to each session.",
   "main": "bot.js",
   "scripts": {
-    "test": "node src/bot.js"
+    "test": "node src/bot.js",
     "start": "node src/bot.js"
   },
   "author": "Althea Moonbrooke",
