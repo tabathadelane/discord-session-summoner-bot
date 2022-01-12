@@ -2,6 +2,8 @@ const cron = require("node-cron");
 const fetch = require("node-fetch");
 const { MessageAttactchment, MessageEmbed } = require("discord.js");
 
+require("dotenv").config();
+
 module.exports = {
   name: "ready",
   once: true,
@@ -13,8 +15,7 @@ module.exports = {
       const events = await fetch(url, {
         method: "GET",
         headers: {
-          Authorization:
-            "Bot OTI3NzE1NTExOTA5ODc5ODI5.YdOQZg.4kHvG7Qc_bVkTjl5jUUACLZqyys",
+          Authorization: `Bot ${process.env.TOKEN}`,
         },
       }).then((response) => response.json());
 

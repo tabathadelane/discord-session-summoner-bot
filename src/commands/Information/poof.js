@@ -13,8 +13,7 @@ module.exports = {
     const events = await fetch(url, {
       method: "GET",
       headers: {
-        Authorization:
-          "Bot OTI3NzE1NTExOTA5ODc5ODI5.YdOQZg.4kHvG7Qc_bVkTjl5jUUACLZqyys",
+        Authorization: `Bot ${process.env.TOKEN}`,
       },
     }).then((response) => response.json());
 
@@ -58,7 +57,7 @@ module.exports = {
     //     method: "GET",
     //     headers: {
     //       Authorization:
-    //         "Bot OTI3NzE1NTExOTA5ODc5ODI5.YdOQZg.4kHvG7Qc_bVkTjl5jUUACLZqyys",
+    //         `Bot ${process.env.TOKEN}`,
     //     },
     //   }
     // ).then((response) => response.json());
