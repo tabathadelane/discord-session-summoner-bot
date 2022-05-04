@@ -39,7 +39,7 @@ module.exports = {
         }
       }
     }
-    console.log(upcomingEvent);
+    await console.log(upcomingEvent.entity_metadata.location);
 
     const month = upcomingDate.toLocaleString("en-US", {
       month: "long",
