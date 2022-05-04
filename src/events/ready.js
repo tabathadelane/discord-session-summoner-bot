@@ -109,12 +109,12 @@ module.exports = {
           await client.channels.cache
             .get("927723006795583569")
             .send({ embeds: [twoHourEmbed] });
-          console.log("Posted in-person event");
+          console.log(location, "Posted in-person event");
         } else {
           await client.channels.cache
             .get("690637774436433982")
             .send({ embeds: [twoHourEmbedVoice] });
-          console.log(location, " - Posted voice event");
+          console.log("Posted voice event");
         }
       }
       if (timeMath < 930000 && timeMath > 870000) {
