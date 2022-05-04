@@ -10,7 +10,7 @@ module.exports = {
   },
 };
 
-fetch("https://aws.random.cat/meow").then((response) => response.json());
+// fetch("https://aws.random.cat/meow").then((response) => response.json());
 
 // client.on("interactionCreate", async (interaction) => {
 //   // ...
