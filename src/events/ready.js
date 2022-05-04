@@ -20,6 +20,8 @@ module.exports = {
       }).then((response) => response.json());
 
       var upcomingEvent = events[0];
+      var entityType = upcomingEvent.entity_type;
+      var location = upcomingEvent.entity_metadata.location;
 
       var upcomingDate = new Date(events[0].scheduled_start_time);
       const now = new Date();
@@ -33,13 +35,14 @@ module.exports = {
           if (tempDate.getTime() < upcomingDate.getTime()) {
             upcomingDate = tempDate;
             upcomingEvent = each;
-            const entityType = each.entity_type;
+            entityType = each.entity_type;
+            location = each.entity_metadata.location;
           }
         }
       }
 
       //
-      console.log(entityType);
+      console.log(entityType, location);
 
       const month = upcomingDate.toLocaleString("en-US", {
         month: "long",
