@@ -74,6 +74,20 @@ module.exports = {
         )
         .setImage("https://kirbyrunner.netlify.app/pink-portal.d5c9c189.gif");
 
+      const twoHourEmbedVoice = new MessageEmbed()
+        .setTitle("You see rip in space and time...")
+        .addFields(
+          {
+            name: "Your next session is approaching.",
+            value: eventDate,
+          },
+          {
+            name: upcomingEvent.name,
+            value: upcomingEvent.description,
+          }
+        )
+        .setImage("https://kirbyrunner.netlify.app/pink-portal.d5c9c189.gif");
+
       const fifteenMinuteEmbed = new MessageEmbed()
         .setTitle("Are you prepared?")
         .addFields(
@@ -87,6 +101,7 @@ module.exports = {
           }
         )
         .setImage("https://c.tenor.com/EQkSXM9MkigAAAAC/judge-judy-hurry.gif");
+
       const timeMath = upcomingDate.getTime() - now.getTime();
       console.log(timeMath);
       if (timeMath < 7230000 && timeMath > 7170000) {
