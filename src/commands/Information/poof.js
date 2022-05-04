@@ -75,7 +75,7 @@ module.exports = {
       .addFields(
         {
           name:
-            "The next session is" + (location ?? ` at + ${location}` | "..."),
+            "The next session is" + (location ?? (" at " + location) | "..."),
           value: formatDate,
         },
         {
