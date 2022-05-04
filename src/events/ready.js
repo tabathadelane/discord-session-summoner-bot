@@ -33,11 +33,13 @@ module.exports = {
           if (tempDate.getTime() < upcomingDate.getTime()) {
             upcomingDate = tempDate;
             upcomingEvent = each;
+            const entityType = each.entity_type;
           }
         }
       }
 
       //
+      console.log(entityType);
 
       const month = upcomingDate.toLocaleString("en-US", {
         month: "long",

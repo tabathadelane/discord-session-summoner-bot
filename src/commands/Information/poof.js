@@ -20,8 +20,6 @@ module.exports = {
       },
     }).then((response) => response.json());
 
-    console.log(events);
-
     var upcomingEvent = events[0];
 
     var upcomingDate = new Date(events[0].scheduled_start_time);
@@ -36,6 +34,7 @@ module.exports = {
         if (tempDate.getTime() < upcomingDate.getTime()) {
           upcomingDate = tempDate;
           upcomingEvent = each;
+          const location = each.entity_metadata.location;
         }
       }
     }
@@ -74,7 +73,7 @@ module.exports = {
       .setTitle("Divination determines...")
       .addFields(
         {
-          name: "The next session is",
+          name: `The next session is ${location ?? "at ${location}" | ""}`,
           value: formatDate,
         },
         {
