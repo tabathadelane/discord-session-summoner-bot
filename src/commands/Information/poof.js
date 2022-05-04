@@ -66,6 +66,7 @@ module.exports = {
     // ).then((response) => response.json());
     // var formatLocation = "";
 
+    await console.log(upcomingEvent.entity_type);
     // await console.log(getChannel.name);
     const exampleEmbed = new MessageEmbed()
       .setTitle("Divination determines...")
