@@ -60,20 +60,6 @@ module.exports = {
       const eventDate = `${weekday}, ${month} ${day} at ${time}.`;
       console.log(now);
 
-      const twoHourEmbed = new MessageEmbed()
-        .setTitle("You see rip in space and time...")
-        .addFields(
-          {
-            name: "Your next session is approaching.",
-            value: eventDate,
-          },
-          {
-            name: upcomingEvent.name,
-            value: upcomingEvent.description,
-          }
-        )
-        .setImage("https://kirbyrunner.netlify.app/pink-portal.d5c9c189.gif");
-
       const twoHourEmbedVoice = new MessageEmbed()
         .setTitle("You see rip in space and time...")
         .addFields(
@@ -87,6 +73,20 @@ module.exports = {
           }
         )
         .setImage("https://kirbyrunner.netlify.app/pink-portal.d5c9c189.gif");
+
+      const twoHourEmbed = new MessageEmbed()
+        .setTitle("Pack your dice & provisions!")
+        .addFields(
+          {
+            name: `Your session at ${location} is approaching.`,
+            value: eventDate,
+          },
+          {
+            name: upcomingEvent.name,
+            value: upcomingEvent.description,
+          }
+        )
+        .setImage("https://i.imgur.com/fdeMC.gif");
 
       const fifteenMinuteEmbed = new MessageEmbed()
         .setTitle("Are you prepared?")
@@ -105,9 +105,17 @@ module.exports = {
       const timeMath = upcomingDate.getTime() - now.getTime();
       console.log(timeMath);
       if (timeMath < 7230000 && timeMath > 7170000) {
-        await client.channels.cache
-          .get("690637774436433982")
-          .send({ embeds: [twoHourEmbed] });
+        if (entityType === 3) {
+          await client.channels.cache
+            .get("927723006795583569")
+            .send({ embeds: [twoHourEmbed] });
+          console.log("Posted in-person event");
+        } else {
+          await client.channels.cache
+            .get("690637774436433982")
+            .send({ embeds: [twoHourEmbedVoice] });
+          console.log(location, " - Posted voice event");
+        }
       }
       if (timeMath < 930000 && timeMath > 870000) {
         await client.channels.cache
