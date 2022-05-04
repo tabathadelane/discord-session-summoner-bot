@@ -20,6 +20,8 @@ module.exports = {
       },
     }).then((response) => response.json());
 
+    console.log(events);
+
     var upcomingEvent = events[0];
 
     var upcomingDate = new Date(events[0].scheduled_start_time);
