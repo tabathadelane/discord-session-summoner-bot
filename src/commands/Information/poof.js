@@ -21,7 +21,7 @@ module.exports = {
     }).then((response) => response.json());
 
     var upcomingEvent = events[0];
-    var location;
+    var location = upcomingEvent.entity_metadata.location;
 
     var upcomingDate = new Date(events[0].scheduled_start_time);
     const now = new Date();
@@ -69,7 +69,6 @@ module.exports = {
     // ).then((response) => response.json());
     // var formatLocation = "";
 
-    await console.log(location);
     // await console.log(getChannel.name);
     const exampleEmbed = new MessageEmbed()
       .setTitle("Divination determines...")
