@@ -74,7 +74,8 @@ module.exports = {
       .setTitle("Divination determines...")
       .addFields(
         {
-          name: `The next session is ${location ?? ` at ${location}` | "..."}`,
+          name:
+            "The next session is" + (location ?? ` at + ${location}` | "..."),
           value: formatDate,
         },
         {
