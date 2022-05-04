@@ -21,6 +21,7 @@ module.exports = {
     }).then((response) => response.json());
 
     var upcomingEvent = events[0];
+    var location;
 
     var upcomingDate = new Date(events[0].scheduled_start_time);
     const now = new Date();
@@ -34,7 +35,7 @@ module.exports = {
         if (tempDate.getTime() < upcomingDate.getTime()) {
           upcomingDate = tempDate;
           upcomingEvent = each;
-          const location = each.entity_metadata.location;
+          location = each.entity_metadata.location;
         }
       }
     }
@@ -73,7 +74,7 @@ module.exports = {
       .setTitle("Divination determines...")
       .addFields(
         {
-          name: `The next session is ${location ?? "at ${location}" | ""}`,
+          name: `The next session is' ${location ?? `at ${location}` | ""}`,
           value: formatDate,
         },
         {
