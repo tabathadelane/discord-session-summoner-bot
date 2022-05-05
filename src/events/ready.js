@@ -107,7 +107,7 @@ module.exports = {
       if (timeMath < 7230000 && timeMath > 7170000) {
         if (entityType === 3) {
           await client.channels.cache
-            .get("927723006795583569")
+            .get("690637774436433982")
             .send({ embeds: [twoHourEmbed] });
           console.log(location, "Posted in-person event");
         } else {
