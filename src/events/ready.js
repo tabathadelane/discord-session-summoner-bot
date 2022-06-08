@@ -75,7 +75,8 @@ module.exports = {
         .setImage("https://kirbyrunner.netlify.app/pink-portal.d5c9c189.gif");
 
       const twoHourEmbed = new MessageEmbed()
-        .setTitle("Pack your dice & provisions!")
+        // .setTitle("Pack your dice & provisions!")
+        .setTitle("You are cordially invited to a wild tea party...")
         .addFields(
           {
             name: `Your session at ${location} is approaching.`,
@@ -86,7 +87,10 @@ module.exports = {
             value: upcomingEvent.description,
           }
         )
-        .setImage("https://i.imgur.com/fdeMC.gif");
+        // .setImage("https://i.imgur.com/fdeMC.gif");
+        .setImage(
+          "https://c.tenor.com/ksZErJvmqRAAAAAC/alice-in-wonderland-tea-party.gif"
+        );
 
       const fifteenMinuteEmbed = new MessageEmbed()
         .setTitle("Are you prepared?")
