@@ -104,7 +104,10 @@ module.exports = {
             value: upcomingEvent.description,
           }
         )
-        .setImage("https://c.tenor.com/EQkSXM9MkigAAAAC/judge-judy-hurry.gif");
+        // .setImage("https://c.tenor.com/EQkSXM9MkigAAAAC/judge-judy-hurry.gif");
+        .setImage(
+          "https://c.tenor.com/lwwlcjiOA1cAAAAC/alice-in-wonderland-im-late.gif"
+        );
 
       const timeMath = upcomingDate.getTime() - now.getTime();
       console.log(timeMath);
