@@ -75,8 +75,7 @@ module.exports = {
         .setImage("https://kirbyrunner.netlify.app/pink-portal.d5c9c189.gif");
 
       const twoHourEmbed = new MessageEmbed()
-        // .setTitle("Pack your dice & provisions!")
-        .setTitle("You are cordially invited to a wild tea party...")
+        .setTitle("Pack your dice & provisions!")
         .addFields(
           {
             name: `Your session at ${location} is approaching.`,
@@ -87,10 +86,7 @@ module.exports = {
             value: upcomingEvent.description,
           }
         )
-        // .setImage("https://i.imgur.com/fdeMC.gif");
-        .setImage(
-          "https://c.tenor.com/ksZErJvmqRAAAAAC/alice-in-wonderland-tea-party.gif"
-        );
+        .setImage("https://i.imgur.com/fdeMC.gif");
 
       const fifteenMinuteEmbed = new MessageEmbed()
         .setTitle("Are you prepared?")
@@ -104,10 +100,7 @@ module.exports = {
             value: upcomingEvent.description,
           }
         )
-        // .setImage("https://c.tenor.com/EQkSXM9MkigAAAAC/judge-judy-hurry.gif");
-        .setImage(
-          "https://c.tenor.com/lwwlcjiOA1cAAAAC/alice-in-wonderland-im-late.gif"
-        );
+        .setImage("https://c.tenor.com/EQkSXM9MkigAAAAC/judge-judy-hurry.gif");
 
       const timeMath = upcomingDate.getTime() - now.getTime();
       console.log(timeMath);
