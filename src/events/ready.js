@@ -86,10 +86,10 @@ module.exports = {
             value: upcomingEvent.description,
           }
         )
-        // .setImage("https://i.imgur.com/fdeMC.gif"); //marry and pippin
-        .setImage(
-          "https://media.tenor.com/xV0E7ihFfvgAAAAC/pirate-ship-arr.gif"
-        ); // snl pirates
+        .setImage("https://i.imgur.com/fdeMC.gif"); //marry and pippin
+      // .setImage(
+      //   "https://media.tenor.com/xV0E7ihFfvgAAAAC/pirate-ship-arr.gif"
+      // ); // snl pirates
 
       const fifteenMinuteEmbed = new MessageEmbed()
         .setTitle("We have our heading")
@@ -103,10 +103,10 @@ module.exports = {
             value: upcomingEvent.description,
           }
         )
-        // .setImage("https://c.tenor.com/EQkSXM9MkigAAAAC/judge-judy-hurry.gif"); //judge judy
-        .setImage(
-          "https://i.pinimg.com/originals/61/a2/e3/61a2e31bd73e186a26443510c37fc6f4.gif"
-        ); // captain jack
+        .setImage("https://c.tenor.com/EQkSXM9MkigAAAAC/judge-judy-hurry.gif"); //judge judy
+      // .setImage(
+      //   "https://i.pinimg.com/originals/61/a2/e3/61a2e31bd73e186a26443510c37fc6f4.gif"
+      // ); // captain jack
 
       const timeMath = upcomingDate.getTime() - now.getTime();
       console.log(timeMath);
