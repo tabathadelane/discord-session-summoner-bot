@@ -20,6 +20,5 @@ module.exports = {
 //       (response) => response.json()
 //     );
 //     interaction.editReply({ files: [file] });
-// comment
 //   }
 // });
